@@ -1,10 +1,10 @@
 sonata_seo:
   encoding: 'UTF-8'
   page:
-    title: 'Project name'
+    title: 'Easy-trips - расскажи свою историю путешествия!'
     default: 'sonata.seo.page.default'
     metas:
       name:
-        keywords: 'foo bar'
-        description: 'The description'
+  
+        description: 'Создай свой личный блог путешествий и поделись своей историей | Easy-trips'
         robots: 'index, follow'
