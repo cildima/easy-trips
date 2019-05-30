@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<html {{ sonata_seo_html_attributes() }}>
+<head {{ sonata_seo_head_attributes() }}>
+    <meta charset="UTF-8">
+    {{ sonata_seo_title() }}
+    {{ sonata_seo_metadatas() }}
+    {{ sonata_seo_link_canonical() }}
+    {{ sonata_seo_lang_alternates() }}
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+{% block logo %}
+    <img src="/assets/images/logo.png" alt="Easy trips" title="Easy trips">
+    <span id="logoText">Easy Trips</span>
+{% endblock %}
+{% block body %}{% endblock %}
+{% block javascripts %}{% endblock %}
+</body>
 </html>

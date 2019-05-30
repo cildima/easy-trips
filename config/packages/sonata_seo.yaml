@@ -1,0 +1,10 @@
+sonata_seo:
+  encoding: 'UTF-8'
+  page:
+    title: 'Project name'
+    default: 'sonata.seo.page.default'
+    metas:
+      name:
+        keywords: 'foo bar'
+        description: 'The description'
+        robots: 'index, follow'
