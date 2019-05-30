@@ -12,8 +12,8 @@ class CommonPagesController extends AbstractController
      */
     public function index()
     {
-        return $this->render('common_pages/index.html.twig', [
-            'controller_name' => 'CommonPagesController',
+
+        return $this->render('common_pages/homepage.html.twig', [
         ]);
     }
 }
