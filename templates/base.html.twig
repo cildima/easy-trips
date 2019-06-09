@@ -6,12 +6,17 @@
     {{ sonata_seo_metadatas() }}
     {{ sonata_seo_link_canonical() }}
     {{ sonata_seo_lang_alternates() }}
-    {% block stylesheets %}{% endblock %}
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('assets/styles/main.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/font/font.css') }}">
+    {% endblock %}
 </head>
 <body>
 {% block logo %}
-    <img src="/assets/images/logo.png" alt="Easy trips" title="Easy trips">
-    <span id="logoText">Easy Trips</span>
+    <div id="header">
+        <img id="logoImage" src="{{ asset('assets/images/logo.png') }}" alt="Easy trips" title="Easy trips">
+        <span id="logoText">Easy Trips</span>
+    </div>
 {% endblock %}
 {% block body %}{% endblock %}
 {% block javascripts %}{% endblock %}
