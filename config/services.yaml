@@ -26,3 +26,19 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    admin.countries:
+        class: App\Admin\CountriesAdmin
+        arguments: [~, App\Entity\Country, App\Controller\CountryController]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: "Countries", group: "Content" }
+        calls:
+            - [ setTemplate, [edit, "admin/editOffice.html.twig"]]
+        public: true
+
+    admin.pages:
+        class: App\Admin\PageAdmin
+        arguments: [~, App\Entity\Page, App\Controller\PagesController, 'title']
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: "Pages", group: "Site pages" }
+        public: true
