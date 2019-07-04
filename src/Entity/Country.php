@@ -50,11 +50,6 @@ class Country implements Translatable
 
     public $entityName = 'country';
 
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\ServiceLinesCountries", mappedBy="country", orphanRemoval=true)
-     */
-    private $serviceLinesCountries;
-
     public function __construct()
     {
         $this->translations = new ArrayCollection();
