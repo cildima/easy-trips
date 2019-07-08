@@ -47,7 +47,6 @@ class TranslationsGenerator
      */
     public function fillInTranslationInfo(Translation &$translation, $lang)
     {
-
         foreach ($this->fields() as $field) {
             $method = 'set' . ucfirst($field);
             if (method_exists($translation, $method)) {
