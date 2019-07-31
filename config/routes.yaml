@@ -1,3 +1,4 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+redcode_tree_data:
+  prefix:   /admin
+  path:     /admin/tree/data
+  controller: App\Controller\PagesController::treeDataAction
